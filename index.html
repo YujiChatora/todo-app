@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOアプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav-container">
+        <button class="nav-button" id="registerBtn">登録</button>
+        <button class="nav-button" id="listBtn">一覧</button>
+    </div>
+
+    <div id="registerView" class="view-container">
+        <div class="container">
+            <h1>タスク登録</h1>
+            <div class="input-container">
+                <input type="text" id="taskInput" placeholder="新しいタスクを入力...">
+                <button id="addButton">追加</button>
+            </div>
+            <div id="successMessage" class="success-message" style="display: none;">タスクを登録しました</div>
+        </div>
+    </div>
+
+    <div id="listView" class="view-container" style="display: none;">
+        <div class="container">
+            <h1>タスク一覧</h1>
+            <div class="sort-container">
+                <label>並び順:</label>
+                <select id="sortSelect">
+                    <option value="created-desc">登録日時（新しい順）</option>
+                    <option value="created-asc">登録日時（古い順）</option>
+                    <option value="updated-desc">更新日時（新しい順）</option>
+                    <option value="updated-asc">更新日時（古い順）</option>
+                </select>
+            </div>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
